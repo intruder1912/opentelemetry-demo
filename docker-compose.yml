@@ -759,6 +759,8 @@ services:
       - OTEL_COLLECTOR_HOST
       - OTEL_COLLECTOR_PORT_GRPC
       - OTEL_COLLECTOR_PORT_HTTP
+      - DT_OTLP_ENDPOINT
+      - DT_API_TOKEN
 
   # Prometheus
   prometheus:
