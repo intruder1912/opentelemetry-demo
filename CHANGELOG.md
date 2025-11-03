@@ -7,6 +7,37 @@ the release.
 
 ## Unreleased
 
+* [feat] add ipv6 support
+  ([#2594](https://github.com/open-telemetry/opentelemetry-demo/pull/2594))
+* [chore] Use pre-built nginx otel image
+  ([#2614](https://github.com/open-telemetry/opentelemetry-demo/pull/2614))
+* [grafana] Update grafana version to 12.2.0
+  ([#2615](https://github.com/open-telemetry/opentelemetry-demo/pull/2615))
+* [frontend] Fix navigation and cart math
+  ([#2660](https://github.com/open-telemetry/opentelemetry-demo/pull/2660))
+* [chore] Upgrade OpenFeature and add fix deprecation warnings for dependency
+  injection
+  ([#2644](https://github.com/open-telemetry/opentelemetry-demo/pull/2644))
+* [frontend] fix item calculation and shipping
+  ([#2684](https://github.com/open-telemetry/opentelemetry-demo/pull/2684))
+
+## 2.1.3
+
+* [chore] Fix postgresql container
+  ([#2597](https://github.com/open-telemetry/opentelemetry-demo/pull/2597))
+
+## 2.1.2
+
+* [chore] add postgresql and opensearch containers to build workflow
+  ([#2595](https://github.com/open-telemetry/opentelemetry-demo/pull/2595))
+
+## 2.1.1
+
+* Align env vars
+  ([#2582](https://github.com/open-telemetry/opentelemetry-demo/pull/2582))
+* [opensearch] Reduce OpenSearch container memory footprint
+  ([#2587](https://github.com/open-telemetry/opentelemetry-demo/pull/2587))
+
 ## 2.1.0
 
 * [chore] add GOMEMLIMIT to all Go services
