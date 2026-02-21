@@ -14,19 +14,21 @@ permissions:
 
 jobs:
   build_images:
-    permissions: # required by the reusable workflow
+    permissions:  # required by the reusable workflow
       contents: read
       packages: write
     uses: ./.github/workflows/component-build-images.yml
     with:
-      push: false
-      version: 'dev'
+      push: ${{ github.event_name == 'push' }}
+      # Use a non-release tag for PR builds; tags are not pushed when push=false.
+      version: ${{ github.event_name == 'push' && 'main' || 'dev' }}
+    secrets: inherit
 
   markdownlint:
     runs-on: ubuntu-latest
     steps:
       - name: check out code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6.0.2
       - name: install dependencies
         run: npm install
       - name: run markdownlint
@@ -36,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check out code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6.0.2
       - uses: actions/setup-python@v6
         with:
           python-version: '3.x'
@@ -49,7 +51,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check out code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6.0.2
       - name: run misspell
         run: make misspell
 
@@ -57,7 +59,7 @@ jobs:
     name: linkspector
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6.0.2
       - name: Run linkspector
         uses: umbrelladocs/action-linkspector@v1
         with:
@@ -68,7 +70,7 @@ jobs:
   sanity:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6.0.2
       - name: run sanitycheck.py
         run: python3 ./internal/tools/sanitycheck.py
 
@@ -76,7 +78,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check out code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6.0.2
       - name: install tools
         run: make install-tools
       - name: run checklicense

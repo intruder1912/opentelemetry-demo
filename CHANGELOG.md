@@ -7,6 +7,21 @@ the release.
 
 ## Unreleased
 
+* [accounting] fix memory leak with dbcontext
+  ([#2876](https://github.com/open-telemetry/opentelemetry-demo/pull/2876))
+* [chore] Upgrade OTel Collector to v0.145.0 with :warning: breaking change:
+  OTLP exporters renamed from `otlp` to `otlp_grpc/jaeger` and from
+  `otlphttp/prometheus` to `otlp_http/prometheus`
+  [#2942](https://github.com/open-telemetry/opentelemetry-demo/pull/2942)
+* [collector] Use the
+  [`set_semconv_span_name()`](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/processor/transformprocessor#set_semconv_span_name)
+  function to better handle the next.js issue
+  [High-cardinality HTTP span names #54694](https://github.com/vercel/next.js/issues/54694)
+  [#2942](https://github.com/open-telemetry/opentelemetry-demo/pull/2942)
+* add `main` tagged images, drop date suffix for `nightly` ([#2994](https://github.com/open-telemetry/opentelemetry-demo/pull/2994))
+
+## 2.2.0
+
 * [feat] add ipv6 support
   ([#2594](https://github.com/open-telemetry/opentelemetry-demo/pull/2594))
 * [chore] Use pre-built nginx otel image
@@ -15,11 +30,25 @@ the release.
   ([#2615](https://github.com/open-telemetry/opentelemetry-demo/pull/2615))
 * [frontend] Fix navigation and cart math
   ([#2660](https://github.com/open-telemetry/opentelemetry-demo/pull/2660))
+* [feat] Add Product Review service with AI-generated summaries
+  ([#2663](https://github.com/open-telemetry/opentelemetry-demo/pull/2663))
 * [chore] Upgrade OpenFeature and add fix deprecation warnings for dependency
   injection
   ([#2644](https://github.com/open-telemetry/opentelemetry-demo/pull/2644))
 * [frontend] fix item calculation and shipping
   ([#2684](https://github.com/open-telemetry/opentelemetry-demo/pull/2684))
+* [flagd-ui] add back legacy REST APIs to empower programmatic usage
+  ([#2720](https://github.com/open-telemetry/opentelemetry-demo/pull/2720))
+* [collector] Remove batch processor
+  ([#2734](https://github.com/open-telemetry/opentelemetry-demo/pull/2734))
+* [email] Add OTLP metrics and logs
+  ([#2737](https://github.com/open-telemetry/opentelemetry-demo/pull/2737))
+* [collector] [dockerstats/receiver] Set API version to 1.44
+  ([#2767](https://github.com/open-telemetry/opentelemetry-demo/pull/2767))
+* [cart] Add health check endpoint
+  ([#2830](https://github.com/open-telemetry/opentelemetry-demo/pull/2830))
+* [product-catalog] Use Postgres database for products
+  ([#2859](https://github.com/open-telemetry/opentelemetry-demo/pull/2859))
 
 ## 2.1.3
 
