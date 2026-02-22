@@ -61,7 +61,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6.0.2
       - name: Run linkspector
-        uses: umbrelladocs/action-linkspector@v1
+        uses: umbrelladocs/action-linkspector@v1.4.0
         with:
           level: info
           fail_level: any
