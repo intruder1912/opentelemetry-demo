@@ -19,6 +19,18 @@ the release.
   [High-cardinality HTTP span names #54694](https://github.com/vercel/next.js/issues/54694)
   [#2942](https://github.com/open-telemetry/opentelemetry-demo/pull/2942)
 * add `main` tagged images, drop date suffix for `nightly` ([#2994](https://github.com/open-telemetry/opentelemetry-demo/pull/2994))
+* [docker] fix `docker-compose.minimal.yml` to be able to run by adding missing
+  postgresql service, environment variables, and dependencies
+  ([#3004](https://github.com/open-telemetry/opentelemetry-demo/pull/3004))
+* [flagd-ui] fix memory issue with BEAM-VM, this reduces flagd-ui memory
+  usage from 2.3GB to 228Mi
+  [#3022](https://github.com/open-telemetry/opentelemetry-demo/pull/3022)
+* [chore] Bump dependent image versions to latest releases
+  ([#3005](https://github.com/open-telemetry/opentelemetry-demo/pull/3005))
+* [ad] and [fraud-detection] Service JVM heap set to 200m for ad service and
+  180m for fraud-detection to prevent large heap size that causes
+  OOMKills with k8s.
+  ([#3105](https://github.com/open-telemetry/opentelemetry-demo/pull/3105))
 
 ## 2.2.0
 
